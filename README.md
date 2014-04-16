@@ -2,7 +2,11 @@
 
 Enables lazy-ish, Enumerator based traversal of data within ActiveRecord.
 
+NOTE: yes, this uses an inefficient paging mechanism (offset/limit) that will get progressively
+slower with each batch load.  A future goal is to provide a pluggable paging mechanism to compensate,
+allowing the integrating developer to choose a more efficient method when the schema and query allows.
 
+Offset/limit is the very flexible method for streaming but is susceptible to [Schlemiel the Painter's algorithm](http://en.wikipedia.org/wiki/Joel_Spolsky#Schlemiel_the_Painter.27s_algorithm).  As you get deaper into the stream, performance per batch will decrease.
 
 
 ## Installation

@@ -12,7 +12,7 @@ module ActiveRecord
       def stream(options={})
         offset = options[:start] || 0
         batch_size = options[:batch_size] || 500
-        scope = scoped
+        scope = respond_to?(:scoped) ? scoped : all
 
         Enumerator.new do |yielder|
           loop do

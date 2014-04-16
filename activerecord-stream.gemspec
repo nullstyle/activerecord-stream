@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = ActiveRecord::Stream::VERSION
   spec.authors       = ["Scott Fleckenstein"]
   spec.email         = ["nullstyle@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{lazy-ish, Enumerator based traversal of data within ActiveRecord}
+  spec.summary       = %q{lazy-ish, Enumerator based traversal of data within ActiveRecord}
+  spec.homepage      = "https://github.com/nullstyle/activerecord-stream"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
 
-  spec.add_dependency "activerecord", "~> 3.2.0"
-  spec.add_dependency "activesupport", "~> 3.2.0"
+  spec.add_dependency "activerecord", ">= 3.2.0"
+  spec.add_dependency "activesupport", ">= 3.2.0"
 end
